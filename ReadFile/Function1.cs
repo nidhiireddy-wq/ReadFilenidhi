@@ -10,12 +10,12 @@ namespace TestFunc;
 public class Function1
 {
     private readonly ILogger<Function1> _logger;
-    private readonly IConfiguration _configuration;
+    //private readonly IConfiguration _configuration;
 
-    public Function1(ILogger<Function1> logger, IConfiguration configuration)
+    public Function1(ILogger<Function1> logger)
     {
         _logger = logger;
-        _configuration = configuration;
+        
     }
 
     [Function("Function1")]
@@ -24,7 +24,7 @@ public class Function1
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
 
-        string filePath = _configuration["SamplePath"];
+        string filePath = "C:\\Users\\Inno\\source\\repos\\sample.txt";
 
         if (!File.Exists(filePath))
         {
