@@ -25,7 +25,7 @@ public class Function1
 
         if (!File.Exists(filePath))
         {
-            return new NotFoundObjectResult("File not found!.");
+            return new NotFoundObjectResult("File not found!");
         }
 
         string fileContent = File.ReadAllText(filePath);
